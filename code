@@ -31,6 +31,37 @@ heightData = sorted(data['Height(Inches)'])
 time.sleep(2)
 print("\n\nCompare your self to others")
 
-myHeight = input("Please input your height(Inches): ")
+myHeight = float(input("Please input your height(Inches): "))
 
 heightData.append(myHeight)
+heightCalc = []
+
+sortedHeightData = sorted(heightData)
+
+for height in sortedHeightData:
+    if height == myHeight:
+        break
+    else:
+        heightCalc.append(height)
+
+percent = (len(heightCalc)/len(heightData))*100
+print(f"Your Perentile  (Height) is {round(percent, 2)}%")
+
+time.sleep(2)
+
+myWeight = float(input("Please input your weight(Pounds): "))
+
+weightData.append(myWeight)
+weightCalc = []
+
+sortedWeightData = sorted(weightData)
+
+for weight in sortedWeightData:
+    if weight == myWeight:
+        break
+    else:
+        weightCalc.append(weight)
+
+percent = (len(weightCalc)/len(weightData))*100
+print(f"Your Perentile (Weight) is {round(percent, 2)}%")
+
