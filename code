@@ -2,7 +2,7 @@
 !mamba install opendatasets
 !mamba install legacy-cgi
 
-#separate installation and code below
+#separated installation, code below
 
 import opendatasets as od
 import pandas
