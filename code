@@ -1,6 +1,9 @@
 !mamba install pandas
 !mamba install opendatasets
 !mamba install legacy-cgi
+
+#separate installation and code below
+
 import opendatasets as od
 import pandas
 import time
@@ -28,6 +31,7 @@ print(f"Standard Deviation (Weight): {round(stdWeight, 2)}")
 print(f"Standard Deviation (Height): {round(stdHeight, 2)}")
 
 heightData = sorted(data['Height(Inches)'])
+weightData = sorted(data['Weight(Pounds)'])
 time.sleep(2)
 print("\n\nCompare your self to others")
 
